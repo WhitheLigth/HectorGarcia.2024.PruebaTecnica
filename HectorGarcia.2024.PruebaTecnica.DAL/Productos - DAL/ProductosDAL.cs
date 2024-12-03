@@ -141,7 +141,7 @@ namespace HectorGarcia._2024.PruebaTecnica.DAL.Productos___DAL
 
         #region METODO PARA BUSCAR
         // Metodo para Buscar Registros Existentes
-        public static async Task<List<Productos>> SearchAsync(Productos productos)
+        public static async Task<List<Productos>> BuscarAsync(Productos productos)
         {
             var productoss = new List<Productos>();
             using (var dbContext = new ContextDB())
@@ -156,7 +156,7 @@ namespace HectorGarcia._2024.PruebaTecnica.DAL.Productos___DAL
 
         #region METODO PARA INCLUIR CATEGORIAS
         // Método que incluye categorias para la búsqueda
-        public static async Task<List<Productos>> SearchIncludeAsync(Productos productos)
+        public static async Task<List<Productos>> BuscarIncludeAsync(Productos productos)
         {
             var productoss = new List<Productos>();
             using (var dbContext = new ContextDB())
