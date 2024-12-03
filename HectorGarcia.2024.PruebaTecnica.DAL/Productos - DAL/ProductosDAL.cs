@@ -117,7 +117,7 @@ namespace HectorGarcia._2024.PruebaTecnica.DAL.Productos___DAL
 
         #region METODO PARA OBTENER POR ID
         // Metodo Para Mostrar Un Registro En Base A Su Id
-        public static async Task<Productos> GetByIdAsync(Productos productos)
+        public static async Task<Productos> ObtenerPorIdAsync(Productos productos)
         {
             var productosDB = new Productos();
             using (var dbContext = new ContextDB())
