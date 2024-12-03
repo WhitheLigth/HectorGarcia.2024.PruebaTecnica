@@ -47,6 +47,14 @@ namespace HectorGarcia._2024.PruebaTecnica.BL.Categorias___BL
         }
         #endregion
 
+        #region METODO PARA OBTENER POR ID
+        // Metodo Para Obtener Un Registro Por Su Id
+        public async Task<Categorias> ObtenerPorIdAsync(Categorias categorias)
+        {
+            return await CategoriasDAL.ObtenerPorIdAsync(categorias);
+        }
+        #endregion
+
         #region METODO PARA BUSCAR
         // Metodo Para Buscar Registro Existentes En La Base De Datos
         public async Task<List<Categorias>> BuscarAsync(Categorias categorias)

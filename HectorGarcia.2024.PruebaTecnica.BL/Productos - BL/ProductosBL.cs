@@ -46,6 +46,14 @@ namespace HectorGarcia._2024.PruebaTecnica.BL.Productos___BL
         }
         #endregion
 
+        #region METODO PARA MOSTRAR POR ID
+        // Metodo Para Mostrar Un Registro Especifico Bajo Un Id
+        public async Task<Productos> ObtenerPorIdAsync(Productos productos)
+        {
+            return await ProductosDAL.ObtenerPorIdAsync(productos);
+        }
+        #endregion
+
         #region METODO PARA BUSCAR
         // Metodo Para Buscar Registros Existentes
         public async Task<List<Productos>> BuscarAsync(Productos productos)
