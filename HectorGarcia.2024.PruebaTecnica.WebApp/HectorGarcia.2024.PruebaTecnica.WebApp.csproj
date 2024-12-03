@@ -7,4 +7,9 @@
     <RootNamespace>HectorGarcia._2024.PruebaTecnica.WebApp</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HectorGarcia.2024.PruebaTecnica.BL\HectorGarcia.2024.PruebaTecnica.BL.csproj" />
+    <ProjectReference Include="..\HectorGarcia.2024.PruebaTecnica.EN\HectorGarcia.2024.PruebaTecnica.EN.csproj" />
+  </ItemGroup>
+
 </Project>

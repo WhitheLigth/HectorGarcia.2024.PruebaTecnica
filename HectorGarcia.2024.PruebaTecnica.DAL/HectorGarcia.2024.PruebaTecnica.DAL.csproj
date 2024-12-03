@@ -11,4 +11,8 @@
     <Folder Include="Documento\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HectorGarcia.2024.PruebaTecnica.EN\HectorGarcia.2024.PruebaTecnica.EN.csproj" />
+  </ItemGroup>
+
 </Project>
