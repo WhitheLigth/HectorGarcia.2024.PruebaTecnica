@@ -115,6 +115,19 @@ namespace HectorGarcia._2024.PruebaTecnica.DAL.Productos___DAL
         }
         #endregion
 
+        #region METODO PARA OBTENER POR ID
+        // Metodo Para Mostrar Un Registro En Base A Su Id
+        public static async Task<Productos> GetByIdAsync(Productos productos)
+        {
+            var productosDB = new Productos();
+            using (var dbContext = new ContextDB())
+            {
+                productosDB = await dbContext.Productos.Include(m => m.Categorias).FirstOrDefaultAsync(c => c.Id == productos.Id);
+            }
+            return productosDB!;
+        }
+        #endregion
+
         #region METODO PARA BUSCAR REGISTROS MEDIANTE EL USO DE FILTROS
         // Metodo Para Buscar Por Filtros
         // IQueryable es una interfaz que toma un coleccion a la cual se le pueden implementar multiples consultas (Filtros)

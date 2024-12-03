@@ -1,6 +1,7 @@
 ﻿#region REFERENCIAS
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -105,6 +106,19 @@ namespace HectorGarcia._2024.PruebaTecnica.DAL.Categorias___DAL
                 categorias = await dbContext.Categorias.ToListAsync();
             }
             return categorias;
+        }
+        #endregion
+
+        #region METODO PARA OBTENER POR ID
+        // Metodo Para Obtener Un Registro Por Su Id
+        public static async Task<Categorias> ObtenerPorIdAsync(Categorias categorias)
+        {
+            var categoriasDb = new Categorias();
+            using (var dbContext = new ContextDB())
+            {
+                categoriasDb = await dbContext.Categorias.FirstOrDefaultAsync(r => r.Id == categorias.Id);
+            }
+            return categoriasDb!;
         }
         #endregion
 
